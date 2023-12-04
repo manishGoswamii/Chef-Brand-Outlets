@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body
+{
+    padding:1.5rem;
+    overflow: hidden;
+    font-family:'Manrope', sans-serif;
+}
+
+a,a:visited,a:link,a:active
+{
+    color:black;
+
+}
+.main
+{   
+    height: 93vh;
+    display: flex;
+}
+
+.outlets
+{
+    width:35%;
+    background-color: #2D3439;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0rem 4rem;
+    position: relative;
+    img.logo
+    {
+        height:13vh;
+        align-self:flex-end;
+        transform: rotate(4deg);
+        position: absolute;
+        right:0px;
+        top:0px;
+        z-index:1;
+    }
+
+    .tiles-container
+    {
+        width: 100%;
+        max-height: 75%;
+        overflow: scroll;
+        margin-top:5rem;
+
+        &::-webkit-scrollbar
+        {
+            width:0;
+        }
+        scrollbar-width:none;
+    }
+        
+    //Not woking with if a space is present                     & ::-webkit-scrollbar 
+
+    p.footer
+    {
+        color:rgba(255, 255, 255, 0.725);
+        font-size: 0.9rem;
+
+        a
+        {
+            color:inherit;
+        }
+    }
+}
+
+#map
+{
+    width:65%;
+    background-color: rgba(0, 0, 0, 0.253);
+}
+//Classes to be inserted using js
+.outlet-tile
+{
+    border-radius: 8px;
+    background-color: rgb(66,72,77);
+    position: relative;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:1.2rem 2rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    font-size:1.2rem;
+    cursor: pointer;
+    .line
+    {
+        background-color: rgb(0,196,106);
+        width:1.2%;
+        height:100%;
+        position:absolute;
+        left:0;
+
+    }
+    
+    
+}
+
+.available
+{
+    color:#83ca89;
+}
+
+
+.unavailable
+{
+    color:#FF6666;
+}
+
+
+
+.leaflet-popup-content-wrapper
+{
+    background-color: rgba(0, 0, 0, 0.554);
+    padding:1.2rem 1.5rem;
+    
+
+    
+
+}
+.leaflet-popup-content
+{
+    color:rgba(255, 255, 255, 0.803);
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+    text-align: left;
+    .mobile-number
+    {
+        margin-top:0.2rem;
+       
+        a
+        {
+            color:inherit;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            text-decoration: underline;
+        }
+    }
+}
+.leaflet-popup-tip
+{
+    background-color: rgba(0, 0, 0, 0.554);
+}
